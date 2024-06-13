@@ -12,7 +12,10 @@ struct ExceptionLookup
 };
 
 static const ExceptionLookup c_ExceptionLookup[] = {
-#define EL(hr, fld) {hr, &g_CLR_RT_WellKnownTypes.fld}
+#define EL(hr, fld)                                                                                                    \
+    {                                                                                                                  \
+        hr, &g_CLR_RT_WellKnownTypes.fld                                                                               \
+    }
     EL(CLR_E_APPDOMAIN_EXITED, m_AppDomainUnloadedException),
     EL(CLR_E_INVALID_PARAMETER, m_ArgumentException),
     EL(CLR_E_ARGUMENT_NULL, m_ArgumentNullException),
@@ -125,9 +128,9 @@ HRESULT Library_corlib_native_System_Exception::CreateInstance(
     if (FAILED(hr = g_CLR_RT_ExecutionEngine.NewObjectFromIndex(ref, cls)))
     {
 #if defined(NANOCLR_APPDOMAINS)
-        ref.SetObjectReference(g_CLR_RT_ExecutionEngine.GetCurrentAppDomain()->m_outOfMemoryException);
+        ref.SetObjectReference(&g_CLR_RT_ExecutionEngine.GetCurrentAppDomain()->m_outOfMemoryException);
 #else
-        ref.SetObjectReference(g_CLR_RT_ExecutionEngine.m_outOfMemoryException);
+        ref.SetObjectReference(&g_CLR_RT_ExecutionEngine.m_outOfMemoryException);
 #endif
 
         hrIn = CLR_E_OUT_OF_MEMORY;
