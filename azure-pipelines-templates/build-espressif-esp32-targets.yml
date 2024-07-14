@@ -18,7 +18,7 @@ steps:
     condition: succeeded()
     displayName: Setup build with CMake
     inputs:
-      cmakeArgs: "--preset $(CMakePreset) -DESP32_IDF_PATH=$(IDF_PATH) -DCMAKE_BUILD_TYPE=MinSizeRel -DBUILD_VERSION=$(NBGV_VersionMajor).$(NBGV_VersionMinor).$(NBGV_BuildNumber).$(TARGET_BUILD_COUNTER) -DTARGET_NAME=$(TargetPublishName) $(BuildOptions)"
+      cmakeArgs: "--preset $(CMakePreset) -DESP32_IDF_PATH=$(IDF_PATH) -DCMAKE_BUILD_TYPE=MinSizeRel -DBUILD_VERSION=1.10.0.14 -DTARGET_NAME=$(TargetPublishName) $(BuildOptions)"
       workingDirectory: ${{ parameters.repoDirectory }}
 
   - task: CMake@1
