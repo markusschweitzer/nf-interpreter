@@ -256,87 +256,6 @@ jobs:
     # there is only a single ESP32 target, but this is already config as a matrix to make it easy to add new ones
     strategy:
       matrix:
-        ESP32_PSRAM_REV0:
-          TargetBoard: ESP32
-          TargetSeries: "esp32"
-          BuildOptions:
-          IDF_Target: esp32
-          TargetName: ESP32
-          PackageName: ESP32_PSRAM_REV0
-          CMakePreset: ESP32_PSRAM_REV0
-
-        ESP32_BLE_REV0:
-          TargetBoard: ESP32
-          TargetSeries: "esp32"
-          BuildOptions:
-          IDF_Target: esp32
-          TargetName: ESP32
-          PackageName: ESP32_BLE_REV0
-          CMakePreset: ESP32_BLE_REV0
-
-        ESP_WROVER_KIT:
-          TargetBoard: ESP32
-          TargetSeries: "esp32"
-          BuildOptions:
-          IDF_Target: esp32
-          TargetName: ESP_WROVER_KIT
-          PackageName: ESP_WROVER_KIT
-          CMakePreset: ESP_WROVER_KIT
-
-        ESP32_LILYGO:
-          TargetBoard: ESP32
-          TargetSeries: "esp32"
-          BuildOptions:
-          IDF_Target: esp32
-          TargetName: ESP32_LILYGO
-          PackageName: ESP32_LILYGO
-          CMakePreset: ESP32_LILYGO
-
-        FEATHER_S2:
-          TargetBoard: ESP32_S2
-          TargetSeries: "esp32_s2"
-          BuildOptions:
-          IDF_Target: esp32s2
-          TargetName: FEATHER_S2
-          PackageName: FEATHER_S2
-          CMakePreset: FEATHER_S2
-
-        ESP32_C3:
-          TargetBoard: ESP32_C3
-          TargetSeries: "esp32c3"
-          BuildOptions:
-          IDF_Target: esp32c3
-          TargetName: ESP32_C3
-          PackageName: ESP32_C3
-          CMakePreset: ESP32_C3
-
-        ESP32_C6_THREAD:
-          TargetBoard: ESP32_C6
-          TargetSeries: "esp32c6"
-          BuildOptions:
-          IDF_Target: esp32c6
-          TargetName: ESP32_C6_THREAD
-          PackageName: ESP32_C6_THREAD
-          CMakePreset: ESP32_C6_THREAD
-
-        ESP32_H2_THREAD:
-          TargetBoard: ESP32_H2
-          TargetSeries: "esp32h2"
-          BuildOptions:
-          IDF_Target: esp32h2
-          TargetName: ESP32_H2_THREAD
-          PackageName: ESP32_H2_THREAD
-          CMakePreset: ESP32_H2_THREAD
-
-        ESP32_S3:
-          TargetBoard: ESP32_S3
-          TargetSeries: "esp32s3"
-          BuildOptions:
-          IDF_Target: esp32s3
-          TargetName: ESP32_S3
-          PackageName: ESP32_S3
-          CMakePreset: ESP32_S3
-
         ESP32_S3_ALL:
           TargetBoard: ESP32_S3
           TargetSeries: "esp32s3"
@@ -345,15 +264,6 @@ jobs:
           TargetName: ESP32_S3_ALL
           PackageName: ESP32_S3_ALL
           CMakePreset: ESP32_S3_ALL
-
-        ESP32_ETHERNET_KIT_1.2:
-          TargetBoard: ESP32
-          TargetSeries: "esp32"
-          BuildOptions:
-          IDF_Target: esp32
-          TargetName: ESP32_ETHERNET_KIT_1.2
-          PackageName: ESP32_ETHERNET_KIT_1.2
-          CMakePreset: ESP32_ETHERNET_KIT_1.2
 
     variables:
       DOTNET_NOLOGO: true
