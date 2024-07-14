@@ -19,6 +19,7 @@ steps:
       targetType: "inline"
       script: |
         Write-Host "$("##vso[task.setvariable variable=NBGV_Version]")0.0.0"
+        Write-Host "$("##vso[task.setvariable variable=NBGV_BuildNumber]")1"
         Write-Host "$("##vso[task.setvariable variable=NBGV_VersionMajor]")0"
         Write-Host "$("##vso[task.setvariable variable=NBGV_VersionMinor]")$env:System_PullRequest_PullRequestNumber"
         Write-Host "$("##vso[task.setvariable variable=NBGV_AssemblyInformationalVersion]")00000000000"
