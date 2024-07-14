@@ -397,6 +397,7 @@
                 "API_nanoFramework.Device.Bluetooth": "ON",
                 "API_System.Device.I2c.Slave": "ON",
                 "API_nanoFramework.Graphics": "ON",
+                "API_nanoFramework.Device.OneWire": "ON",
                 "GRAPHICS_DISPLAY": "Generic_SPI.cpp",
                 "TOUCHPANEL_DEVICE": "XPT2046.cpp",
                 "GRAPHICS_DISPLAY_INTERFACE": "Spi_To_Display.cpp",
